@@ -15,13 +15,11 @@ import java.io.IOException;
 public class OriginalDesign extends PApplet {
 
 public void setup() {
-  size(400,400);
+  size(displayWidth,displayHeight);
   background(136, 225, 247);
 }
 
 public void draw() {
-  // cat(0,0);
-  // ellipse(200,200,50,50);
 }
 
 // void cat(int x, int y) {
@@ -68,19 +66,19 @@ public void draw() {
 // }
 
 
-// void mouseDragged() {
-//   strokeWeight(5);
-//   stroke(randColor(), randColor(), randColor());
-//   line(mouseX+randNum(),mouseY+randNum(),mouseX+randNum(),mouseY+randNum());
-// }
+public void mouseDragged() {
+  strokeWeight(5);
+  stroke(randColor(), randColor(), randColor());
+  line(mouseX+randNum(),mouseY+randNum(),mouseX+randNum(),mouseY+randNum());
+}
 
-// float randNum() {
-//     return random(-10,10);
-// }
+public float randNum() {
+    return random(-10,10);
+}
 
-// float randColor() {
-//     return random(0,255);    
-// }
+public float randColor() {
+    return random(0,255);    
+}
 
 // void catCatDog() {
 //   int picNum = 0;
@@ -239,7 +237,7 @@ public void draw() {
 //   void mouseClicked() {
 //     picNum++;
 //     picNum = picNum % 3;
-//   }}
+//   
   static public void main(String[] passedArgs) {
     String[] appletArgs = new String[] { "OriginalDesign" };
     if (passedArgs != null) {

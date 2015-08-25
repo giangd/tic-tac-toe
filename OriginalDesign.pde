@@ -1,11 +1,24 @@
 void setup() {
-  size(400,400);
+  size(1600,750);
   background(136, 225, 247);
+  frameRate(120);
 }
 
 void draw() {
-  // cat(0,0);
-  // ellipse(200,200,50,50);
+}
+
+void mouseDragged() {
+  strokeWeight(5);
+  stroke(randColor(), randColor(), randColor());
+  line(mouseX+randNum(),mouseY+randNum(),mouseX+randNum(),mouseY+randNum());
+}
+
+float randNum() {
+    return random(-10,10);
+}
+
+float randColor() {
+    return random(0,255);    
 }
 
 // void cat(int x, int y) {
@@ -52,19 +65,6 @@ void draw() {
 // }
 
 
-void mouseDragged() {
-  strokeWeight(5);
-  stroke(randColor(), randColor(), randColor());
-  line(mouseX+randNum(),mouseY+randNum(),mouseX+randNum(),mouseY+randNum());
-}
-
-float randNum() {
-    return random(-10,10);
-}
-
-float randColor() {
-    return random(0,255);    
-}
 
 // void catCatDog() {
 //   int picNum = 0;
@@ -223,4 +223,4 @@ float randColor() {
 //   void mouseClicked() {
 //     picNum++;
 //     picNum = picNum % 3;
-//   &
+//   
