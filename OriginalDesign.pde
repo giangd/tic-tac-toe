@@ -1,72 +1,70 @@
 void setup() {
   size(400,400);
-
   background(136, 225, 247);
 }
 
 void draw() {
-  cat(0,0);
-}
-void cat(int x, int y) {
-  translate(x, y);
-  fill(8, 159, 228);
-  stroke(8, 159, 228);
-  bezier(157,95,164,89,236,89,244,97);//head
-  bezier(244,97,243,82,252,38,275,56);
-  bezier(275,56,297,73,369,221,298,304);
-  bezier(298,304,265,343,170,376,101,303);
-  bezier(101,303,32,226,101,78,123,57);
-  bezier(123,57,146,37,154,80,157,95);
-
-  beginShape();
-  vertex(157, 95);
-  vertex(244, 97);
-  vertex(275, 63);
-  vertex(295, 304);
-  vertex(104, 303);
-  vertex(123, 63);
-  endShape(CLOSE);
-  
-  stroke(0, 0, 0);
-  strokeWeight(10);
-  bezier(116,212,118,250,163,246,162,212);//eye
-  bezier(233,212,232,246,276,253,279,212);
-
-  strokeWeight(1);
-  fill(247, 200, 200);
-  stroke(247, 200, 200);
-  bezier(186,263,192,258,212,258,215,264);//nose
-  bezier(215,264,218,270,209,283,201,283);
-  bezier(201,283,192,283,180,270,186,263);
-  triangle(186,263,215,264,201,283);
-  
-  
-  strokeWeight(10);
-  stroke(8,159,228);
-  line(77,259,47,251);//left
-  line(89,285,48,296);
-  
-  line(322,261,353,251);//right
-  line(311,285,353,296);
+  // cat(0,0);
+  // ellipse(200,200,50,50);
 }
 
-// void mouseDragged() {
-//   strokeWeight(5);
-//   stroke(randColor(), randColor(), randColor());
-//   line(mouseX+randNum(),mouseY+randNum(),mouseX+randNum(),mouseY+randNum());
+// void cat(int x, int y) {
+//   translate(x, y);
+//   fill(8, 159, 228);
+//   stroke(8, 159, 228);
+//   bezier(157,95,164,89,236,89,244,97);//head
+//   bezier(244,97,243,82,252,38,275,56);
+//   bezier(275,56,297,73,369,221,298,304);
+//   bezier(298,304,265,343,170,376,101,303);
+//   bezier(101,303,32,226,101,78,123,57);
+//   bezier(123,57,146,37,154,80,157,95);
+
+//   beginShape();
+//   vertex(157, 95);
+//   vertex(244, 97);
+//   vertex(275, 63);
+//   vertex(295, 304);
+//   vertex(104, 303);
+//   vertex(123, 63);
+//   endShape(CLOSE);
+  
+//   stroke(0, 0, 0);
+//   strokeWeight(10);
+//   bezier(116,212,118,250,163,246,162,212);//eye
+//   bezier(233,212,232,246,276,253,279,212);
+
+//   strokeWeight(1);
+//   fill(247, 200, 200);
+//   stroke(247, 200, 200);
+//   bezier(186,263,192,258,212,258,215,264);//nose
+//   bezier(215,264,218,270,209,283,201,283);
+//   bezier(201,283,192,283,180,270,186,263);
+//   triangle(186,263,215,264,201,283);
+  
+  
+//   strokeWeight(10);
+//   stroke(8,159,228);
+//   line(77,259,47,251);//left
+//   line(89,285,48,296);
+  
+//   line(322,261,353,251);//right
+//   line(311,285,353,296);
 // }
 
-// float randNum() {
-//     return random(-10,10);
-// }
 
-// float randColor() {
-//     return random(0,255);    
-// }
+void mouseDragged() {
+  strokeWeight(5);
+  stroke(randColor(), randColor(), randColor());
+  line(mouseX+randNum(),mouseY+randNum(),mouseX+randNum(),mouseY+randNum());
+}
 
-// double drawSprinkl() {
-    
-// }
+float randNum() {
+    return random(-10,10);
+}
+
+float randColor() {
+    return random(0,255);    
+}
 
 // void catCatDog() {
 //   int picNum = 0;
@@ -225,4 +223,4 @@ void cat(int x, int y) {
 //   void mouseClicked() {
 //     picNum++;
 //     picNum = picNum % 3;
-//   }}
+//   &
