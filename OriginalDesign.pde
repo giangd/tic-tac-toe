@@ -1,10 +1,13 @@
+int x = 0;
+
 void setup() {
-  size(1600,750);
+  //size(1600,750);
+  size(500,500);
   background(136, 225, 247);
-  frameRate(120);
 }
 
 void draw() {
+	
 }
 
 void mouseDragged() {
@@ -14,11 +17,13 @@ void mouseDragged() {
 }
 
 float randNum() {
-    return random(-10,10);
+    return (float)Math.random()*20-10;
+    // return random(-10,10);
 }
 
 float randColor() {
-    return random(0,255);    
+	return (float)Math.random()*255;
+    // return random(0,255);    
 }
 
 // void cat(int x, int y) {
@@ -222,5 +227,4 @@ float randColor() {
   
 //   void mouseClicked() {
 //     picNum++;
-//     picNum = picNum % 3;
-//   
+//     picNum = picNum % 3

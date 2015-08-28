@@ -14,12 +14,32 @@ import java.io.IOException;
 
 public class OriginalDesign extends PApplet {
 
+int x = 0;
+
 public void setup() {
-  size(displayWidth,displayHeight);
+  //size(1600,750);
+  size(500,500);
   background(136, 225, 247);
 }
 
 public void draw() {
+	
+}
+
+public void mouseDragged() {
+  strokeWeight(5);
+  stroke(randColor(), randColor(), randColor());
+  line(mouseX+randNum(),mouseY+randNum(),mouseX+randNum(),mouseY+randNum());
+}
+
+public float randNum() {
+    return (float)Math.random()*20-10;
+    // return random(-10,10);
+}
+
+public float randColor() {
+	return (float)Math.random()*255;
+    // return random(0,255);    
 }
 
 // void cat(int x, int y) {
@@ -66,19 +86,6 @@ public void draw() {
 // }
 
 
-public void mouseDragged() {
-  strokeWeight(5);
-  stroke(randColor(), randColor(), randColor());
-  line(mouseX+randNum(),mouseY+randNum(),mouseX+randNum(),mouseY+randNum());
-}
-
-public float randNum() {
-    return random(-10,10);
-}
-
-public float randColor() {
-    return random(0,255);    
-}
 
 // void catCatDog() {
 //   int picNum = 0;
@@ -236,8 +243,7 @@ public float randColor() {
   
 //   void mouseClicked() {
 //     picNum++;
-//     picNum = picNum % 3;
-//   
+//     picNum = picNum % 3
   static public void main(String[] passedArgs) {
     String[] appletArgs = new String[] { "OriginalDesign" };
     if (passedArgs != null) {
